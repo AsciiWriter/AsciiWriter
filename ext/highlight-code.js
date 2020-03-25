@@ -12,7 +12,7 @@ module.exports = function ({ selector }) {
       const elem = $(code);
       const language = elem.prop('data-lang');
       const fileContents = elem.html();
-      elem.parent().replaceWith( `<code data="language-${language}">${fileContents}</code>`);
+      elem.parent().replaceWith( `<pre><code data="language-${language}">${fileContents}</code></pre>`);
     });
 
     file.contents = Buffer.from($.html());
