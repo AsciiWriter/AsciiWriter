@@ -1,4 +1,4 @@
-= AsciiWriter is AsciiDoctor based static site generator
+= AsciiWriter is AsciiDoctor.js based static site generator
 
 AsciiWriter is a fork of https://github.com/Dev-Mind/devmind-website/releases/tag/1.0.0["Dev-Mind website" Gulp scaffold (version 1.0)], it uses Node.js, Asciidoctor.js and Handlebars templating engine.
 
@@ -22,11 +22,11 @@ git clone https://github.com/asciiwriter/asciiwriter
 To create HTML files, simply run npm scripts:
 
 ```
-npm install && npm run default
+npm install && npm run build
 ```
 
 ```
-npm npm run default:sass
+npm run default:sass
 ```
 
 Once your pages are generated navigate to the ```build/docs``` directory and initialize git:
