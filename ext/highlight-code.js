@@ -12,8 +12,7 @@ module.exports = function ({ selector }) {
       const elem = $(code);
       const language = elem.prop('data-lang');
       const fileContents = elem.html();
-      elem.parent().replaceWith( `<code class="language-${language}">${fileContents}</code>`);
-      elem.addClass('highlight.js');
+      elem.parent().replaceWith( `<code data="language-${language}">${fileContents}</code>`);
     });
 
     file.contents = Buffer.from($.html());
