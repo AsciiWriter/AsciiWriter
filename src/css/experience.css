@@ -1,0 +1,122 @@
+.aw-extra--container {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 4px;
+}
+
+.aw-extra--container-past {
+  background-color: #CFD8DC;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 4px;
+}
+
+.aw-extra--label-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.aw-extra--label {
+  border-radius: 4px;
+  border: 1px solid #c9c9c9;
+  background-color: white;
+  padding: 0.3em;
+  margin: 0.1em;
+  opacity: 0.7;
+  color: #5f5346;
+}
+
+.aw-extra--section {
+  padding-bottom: 1em;
+}
+
+.aw-extra--graph {
+  display: flex;
+}
+
+.aw-extra--step {
+  text-align: center;
+}
+
+.aw-extra--date {
+  position: relative;
+  top: -1.2em;
+  left: -2em;
+}
+
+.aw-extra--before {
+  border: 2px solid white;
+  padding: 0 1em 1em 1em;
+  color: white;
+  font-weight: bold;
+  border-left: none;
+}
+.aw-extra--before a {
+  text-decoration: none;
+}
+
+.aw-extra--after {
+  border: 2px solid white;
+  padding: 0 1em 1em 1em;
+  color: white;
+  font-weight: bold;
+  border-right: none;
+}
+.aw-extra--after a {
+  text-decoration: none;
+}
+
+.aw-extra--2 {
+  border: 2px solid white;
+  padding: 0 1em 1em 1em;
+  color: white;
+  font-weight: bold;
+  flex: 2;
+}
+.aw-extra--2 a {
+  text-decoration: none;
+}
+
+.aw-extra--6 {
+  border: 2px solid white;
+  padding: 0 1em 1em 1em;
+  color: white;
+  font-weight: bold;
+  flex: 6;
+}
+.aw-extra--6 a {
+  text-decoration: none;
+}
+
+.aw-extra--1 {
+  border: 2px solid white;
+  padding: 0 1em 1em 1em;
+  color: white;
+  font-weight: bold;
+  flex: 1;
+}
+.aw-extra--1 a {
+  text-decoration: none;
+}
+
+.aw-extra--4 {
+  border: 2px solid white;
+  padding: 0 1em 1em 1em;
+  color: white;
+  font-weight: bold;
+  flex: 4;
+}
+.aw-extra--4 a {
+  text-decoration: none;
+}
+
+.aw-extra--3 {
+  border: 2px solid white;
+  padding: 0 1em 1em 1em;
+  color: white;
+  font-weight: bold;
+  flex: 3;
+}
+.aw-extra--3 a {
+  text-decoration: none;
+}

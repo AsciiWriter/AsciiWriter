@@ -1,8 +1,14 @@
 {
-  "index.html" : {
-    "keywords": "Dev-mind",
-    "title": "Dev-Mind - app loading",
-    "description" : "Dev-mind votre partenaire",
+  "404.html" : {
+    "keywords": "Asciidoctor.js, Asciidoc, Node.js, Gulp, Static Site Generator",
+    "title": "404 there is no page here!",
+    "description" : "Page not found",
     "priority": -1
+  },
+  "index.html" : {
+    "keywords": "Asciidoctor.js, Asciidoc, Node.js, Gulp, Static Site Generator",
+    "title": "AsciiWriter - a simple static site generator that uses asciidoc file format",
+    "description" : "AsciiWriter is a simple static site generator based on Asciidoctor.js, Gulp and Handlebars",
+    "priority": 0.8
   }
 }

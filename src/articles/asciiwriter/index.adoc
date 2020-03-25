@@ -1,0 +1,35 @@
+= apply-template
+:doctitle: apply template
+:language: en
+:description: Test
+:keywords: web, test
+:author: ojn
+:revdate: 2019-04-26
+:category: Test
+:teaser: Test
+:imgteaser: test_00.jpg
+:pdf-width: 4in
+:pdf-height: 7in
+:prism-languages: ruby
+:code: src/code/
+:sass: src/sass/
+
+`apply-template` ext specified in link:./index.js[index.js] (extApplyTemplate) sets the handlebar templates on a file stream. Templates are applied after `read-html` and `read-asciidoctor` exts create the `templateModel` which is then sent to Handlebars where the template is used.
+
+*Example of usage*
+[source,javascript]
+----
+include::{code}gulpfile.js[tags=hbs-partials]
+----
+
+*Example of no metadata*
+[source,javascript]
+----
+include::{code}/ext/read-html.js[tags=no-metadata]
+----
+
+*Example of off sass include*
+[source,sass]
+----
+include::{sass}/extra.scss[tags=section]
+----

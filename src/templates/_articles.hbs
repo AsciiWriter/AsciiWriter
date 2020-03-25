@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preload" href="../../css/main.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../../css/bloglist.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>>
+    {{> _html_header baseuri='../../'}}
+</head>
+<body class="dev-mind">
+{{> _page_header baseuri='../../'}}
+<main>
+    <div class="aw-block--blog">
+
+
+        <aw-article>
+            {{#modedev}}
+                <h2>DEV</h2>
+            {{/modedev}}
+            <article>
+                <h1 class="aw-blog--info-title">{{ title }}</h1>
+                <div class="aw-blog--info-date">
+                    <small><b>{{ revdate }}</b></small>
+                    <small id="nbview"></small>
+                </div>
+                <div id="blog-keywords" class="blog-keywords">
+                    {{#keywords}}
+                        <span class="aw-blog--keyword-detail"><small>{{.}}</small></span>&nbsp;
+                    {{/keywords}}
+                </div>
+                <div class="aw-blog--content">
+                    {{{ contents }}}
+                </div>
+            </article>
+
+            <div class="btn-group">
+                <div class="btn-group--element">
+                    <button onclick="blog.sendSocial('twitter', 'https://asciiwriter.github.io/articles/{{dir}}/{{filename}}.html', '{{ title }}')"
+                            class="btn-inverse">
+                        <img src="../../img/contact/twitter.svg" alt="Twitter" class="aw-social"></button>
+
+                </div>
+            </div>
+
+            <br>
+            <div id="previous-blogpost">
+                <div class="aw-blog--previous">
+                    {{#previous}}
+                        Previous article : <a
+                            href="../{{dir}}/{{filename}}.html">{{doctitle}}</a><br>
+                    {{/previous}}
+                    {{#next}}
+                        Next article : <a href="../{{dir}}/{{filename}}.html">{{doctitle}}</a>
+                    {{/next}}
+
+                    <small>Kommentera gärna via Twitter. </small>
+                </div>
+            </div>
+        </aw-article>
+    </div>
+    {{> _page_footer baseuri='../../'}}
+</main>
+{{> _html_footer baseuri='../../'}}
+<script src="../../js/blog.js">
+    blog = true;
+</script>
+</body>
+</html>

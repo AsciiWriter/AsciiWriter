@@ -1,0 +1,28 @@
+.aw_footer {
+  color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.aw_footer__middle {
+  flex-grow: 1;
+}
+.aw_footer__right {
+  text-align: right;
+}
+.aw_footer .aw_society {
+  color: white;
+}
+.aw_footer div {
+  margin-right: 1em;
+  width: 100%;
+}
+.aw_footer .is-small-screen {
+  padding: 0;
+  margin: 0 1em;
+  font-size: 12px;
+}
+.aw_footer .is-large-screen {
+  padding: 0.7em;
+  margin: 0.7em 1em;
+}

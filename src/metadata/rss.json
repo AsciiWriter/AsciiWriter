@@ -1,10 +1,10 @@
 {
-  "blogurl" : "https://www.dev-mind.fr/blog",
-  "blogimgurl" : "https://www.dev-mind.fr/img/blog",
-  "rssurl": "https://www.dev-mind.fr/rss/blog.xml",
-  "title": "Le blog de Dev-Mind - articles sur le développement (Java, Web, ...) et différents sujets liés aux méthodes agiles.",
-  "description": "Le blog Dev-Mind regroupe des articles des interviews sur des sujets divers allant de la programmation Java JavaScript aux méthodes agiles Environnement, Blogs ...",
-  "copyright": "Copyright Dev-Mind",
-  "logourl":"https://www.dev-mind.fr/img/logo/logo_200.png",
-  "shorttile": "Le blog de Dev-Mind"
+  "articlesurl" : "https://asciiwriter.github.io/articles",
+  "articlesimgurl" : "https://asciiwriter.github.io/img/_rss/articles",
+  "rssurl": "https://asciiwriter.github.io/rss/articles.xml",
+  "title": "Articles from AsciiWriter - a simple static site generator that uses asciidoc file format",
+  "description": "AsciiWriter is a simple static site generator based on Asciidoctor.js, Gulp and Handlebars",
+  "copyright": "AsciiWriter articles are licensed with Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+  "logourl":"https://asciiwriter.github.io/img/logo/logo_200.png",
+  "shorttile": "AsciiWriter static site generator"
 }

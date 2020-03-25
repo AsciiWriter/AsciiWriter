@@ -1,0 +1,127 @@
+.aw-blog--container {
+  display: flex;
+}
+@media (max-width: 700px) {
+  .aw-blog--container {
+    display: block;
+  }
+}
+
+.aw-blog--container-article {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  .aw-blog--container-article {
+    flex-direction: column;
+    flex-basis: auto;
+  }
+}
+
+.aw-blog--container-left {
+  flex: 2 1 0;
+}
+
+.aw-blog--article, .aw-blog--article-head, .aw-blog--article-archive {
+  background-color: white;
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 1em;
+  flex: 0 1 49%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.aw-blog--article > h1, .aw-blog--article-head > h1, .aw-blog--article-archive > h1 {
+  font-size: 25px;
+  line-height: 27px;
+}
+.aw-blog--article > h2, .aw-blog--article-head > h2, .aw-blog--article-archive > h2 {
+  font-size: 20px;
+  line-height: 22px;
+}
+@media (max-width: 700px) {
+  .aw-blog--article, .aw-blog--article-head, .aw-blog--article-archive {
+    flex: 0 1 auto;
+    padding: 0.5em;
+    margin: 0.3em 0;
+    min-height: 5em;
+  }
+  .aw-blog--article > h1, .aw-blog--article-head > h1, .aw-blog--article-archive > h1 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .aw-blog--article > h2, .aw-blog--article-head > h2, .aw-blog--article-archive > h2 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.aw-blog--article-archive {
+  flex: 0 1 33%;
+}
+@media (max-width: 700px) {
+  .aw-blog--article-archive {
+    flex: 0 1 auto;
+  }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .aw-blog--article-archive {
+    flex: 0 1 49%;
+  }
+}
+
+.aw-blog--article-head {
+  flex: 1 2 auto;
+}
+.aw-blog--article-head .aw-blog--imgteaser {
+  order: 0;
+}
+
+.aw-blog--article-head-load {
+  width: 100%;
+  text-align: center;
+  max-height: 400px;
+}
+
+.aw-blog--keyword-detail {
+  border-radius: 4px;
+  padding: 0.2em;
+  background-color: white;
+}
+
+.aw-blog--info-date {
+  padding-bottom: 0.3em;
+}
+
+.aw-blog--imgteaser {
+  margin-top: 0.5em;
+  text-align: center;
+  order: -1;
+}
+@media (max-width: 700px) {
+  .aw-blog--imgteaser {
+    order: 0;
+  }
+}
+.aw-blog--imgteaser img {
+  width: 100%;
+  height: auto;
+}
+
+.aw-blog--teaser {
+  text-align: justify;
+}
+
+.aw-blog--head {
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  .aw-blog--head {
+    min-height: auto;
+    max-height: 100%;
+    height: auto;
+  }
+}

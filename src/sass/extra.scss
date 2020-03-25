@@ -1,0 +1,89 @@
+.aw-extra--container{
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 4px;
+}
+
+.aw-extra--container-past{
+  background-color: #CFD8DC;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 4px;
+}
+
+.aw-extra--label-box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.aw-extra--label{
+  border-radius: 4px;
+  border: 1px solid #c9c9c9;
+  background-color: white;
+  padding: 0.3em;
+  margin: 0.1em;
+  opacity: 0.7;
+  color: #5f5346;
+}
+
+// tag::section[]
+.aw-extra--section{
+  padding-bottom: 1em;
+}
+// end::section[]
+
+.aw-extra--graph{
+  display: flex
+}
+
+@mixin aw-extra--elt(){
+  border: 2px solid white;
+  padding: 0 1em 1em 1em;
+  color: white;
+  font-weight: bold;
+  a{
+    text-decoration: none;
+  }
+}
+
+.aw-extra--step{
+  text-align: center;
+}
+
+.aw-extra--date{
+  position:relative;
+  top: -1.2em;
+  left:-2em;
+}
+
+.aw-extra--before{
+  @include aw-extra--elt;
+  border-left: none;
+}
+.aw-extra--after{
+  @include aw-extra--elt;
+  border-right: none;
+}
+.aw-extra--1{
+  @include aw-extra--elt;
+  flex:1;
+}
+.aw-extra--2{
+  @include aw-extra--elt;
+  flex: 2;
+}
+.aw-extra--3{
+  @include aw-extra--elt;
+  flex:3;
+}
+.aw-extra--4{
+  @include aw-extra--elt;
+  flex:4;
+}
+.aw-extra--5{
+  @include aw-extra--elt;
+  flex:5;
+}
+.aw-extra--6{
+  @include aw-extra--elt;
+  flex:6;
+}

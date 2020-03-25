@@ -1,0 +1,9 @@
+.aw-social {
+  min-width: 2em;
+  max-width: 2em;
+  width: 2em;
+  height: 2em;
+}
+.aw-social:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,237 @@
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*=language-],
+pre[class*=language-] {
+  color: #555555;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  background-color: #ECEFF1;
+}
+
+pre[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection,
+code[class*=language-]::-moz-selection, code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*=language-]::selection, pre[class*=language-] ::selection,
+code[class*=language-]::selection, code[class*=language-] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*=language-],
+pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.function {
+  color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+article {
+  padding: 1em;
+}
+@media (max-width: 700px) {
+  article {
+    padding: 1em 0em;
+  }
+}
+
+aw-article {
+  display: block;
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 1em;
+}
+
+@media (max-width: 700px) {
+  .aw-blog--info-title {
+    margin: 0px 4px;
+  }
+}
+
+@media (max-width: 700px) {
+  .aw-blog--info-date {
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 700px) {
+  .blog-keywords {
+    margin: 0em 1em;
+  }
+}
+
+.imageblock, .videoblock {
+  text-align: center;
+}
+
+.aw-blog--previous {
+  padding: 2em;
+}
+
+.aw-blog-comment--add {
+  text-align: left;
+}
+.aw-blog-comment--add label {
+  display: inline-block;
+  width: 100%;
+  padding-top: 1em;
+}
+.aw-blog-comment--add .aw-blog-comment--control {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.aw-blog--comment .head {
+  margin-bottom: 1em;
+}
+.aw-blog--comment .comment {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #ddbcee;
+}
+
+.aw-blog--content {
+  background-color: white;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 4px;
+}
+
+.admonitionblock {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  background-color: #eeeeee;
+}
+.admonitionblock .title {
+  margin: 1em;
+  color: #ff4081;
+}
+
+blockquote > .paragraph {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  background-color: #424242;
+  color: white;
+  border-radius: 4px;
+}
+blockquote > .paragraph > p > a {
+  color: white !important;
+}
+
+.tableblock {
+  width: 100%;
+}

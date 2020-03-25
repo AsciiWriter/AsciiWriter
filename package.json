@@ -1,44 +1,50 @@
 {
-  "name": "devmind-website",
-  "version": "1.0.0",
-  "description": "Gulp extensions to generate a website with blog pages written in asciidoc",
+  "name": "AsciiWriter",
+  "version": "0.0.1",
+  "description": "Asciidoctor.js and Gulp based static site generator",
   "main": "index.js",
   "scripts": {
+    "build": "gulp default",
+    "build:sass": "gulp sass",
     "test": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dev-Mind/devmind-website.git"
+    "url": "git+https://github.com/AsciiWriter/AsciiWriter.git"
   },
   "keywords": [
-    "Website",
-    "AsciiDoc"
+    "website",
+    "static site generator",
+    "articles",
+    "blog",
+    "asciiwriter",
+    "asciidoc",
+    "asciidoctor",
+    "asciidoctor.js",
+    "gulp",
+    "handlebars"
   ],
   "engines": {
     "node": ">=10.0.0"
   },
-  "author": "Guillaume EHRET <Dev-Mind>",
+  "author": "ojn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dev-Mind/devmind-website/issues"
+    "url": "https://github.com/AsciiWriter/AsciiWriter/issues"
   },
-  "homepage": "https://github.com/Dev-Mind/devmind-website#readme",
+  "homepage": "https://github.com/AsciiWriter/AsciiWriter#readme",
   "devDependencies": {
-    "gulp": "4.0.0",
-    "gulp-cli": "^2.0.1",
-    "express": "^4.16.3"
-  },
-  "dependencies": {
-    "asciidoctor.js": "^1.5.6-preview.3",
+    "@asciidoctor/core": "^2.1.1",
     "cheerio": "^0.22.0",
-    "fs": "^0.0.1-security",
-    "graceful-fs": "^4.1.11",
-    "handlebars": "^4.0.12",
-    "highlight.js": "^9.15.8",
-    "map-stream": "^0.0.7",
-    "moment": "^2.18.1",
-    "node-prismjs": "^0.1.2",
-    "plugin-error": "^1.0.1",
-    "through": "^2.3.8"
-  }
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-dart-sass": "^0.9.1",
+    "handlebars": "^4.7.3",
+    "highlight.js": "^9.18.1",
+    "map-stream": "0.0.7",
+    "moment": "^2.24.0",
+    "plugin-error": "^1.0.1"
+  },
+  "dependencies": {}
 }

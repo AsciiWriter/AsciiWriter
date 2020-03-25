@@ -1,0 +1,190 @@
+.aw-block--intro {
+  width: 100%;
+  background-color: #424242;
+  color: #ECEFF1;
+  padding: 0;
+  margin: 0;
+}
+.aw-block--intro a, .aw-block--intro a:hover, .aw-block--intro a:visited {
+  font-weight: bold;
+  color: #ECEFF1;
+  text-decoration: none;
+}
+.aw-block--intro .btn {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: #ECEFF1 !important;
+  padding: 1em;
+  margin: auto;
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.aw-block--intro .btn:hover {
+  background-color: #ECEFF1;
+  border: 2px solid #ECEFF1;
+  color: #424242 !important;
+  padding: 1em;
+}
+
+.aw-block--blog {
+  width: 100%;
+  background-color: #ECEFF1;
+  color: #424242;
+  padding: 0;
+  margin: 0;
+}
+.aw-block--blog a, .aw-block--blog a:hover, .aw-block--blog a:visited {
+  font-weight: bold;
+  color: #424242;
+  text-decoration: none;
+}
+.aw-block--blog .btn {
+  background-color: transparent;
+  border: 2px solid #424242;
+  border-radius: 4px;
+  color: #424242 !important;
+  padding: 1em;
+  margin: auto;
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.aw-block--blog .btn:hover {
+  background-color: white;
+  border: 2px solid #424242;
+  color: #424242 !important;
+  padding: 1em;
+}
+.aw-block--blog .btn-inverse {
+  background-color: #424242;
+  border: 2px solid #424242;
+  border-radius: 4px;
+  color: white !important;
+  padding: 1em;
+  margin: auto;
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+  cursor: pointer;
+  width: "auto";
+  text-align: center;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  margin-left: 2px;
+}
+.aw-block--blog .btn-inverse:hover {
+  background-color: #585858;
+  border: 2px solid #424242;
+  color: white !important;
+  padding: 1em;
+}
+
+.aw-block--news {
+  width: 100%;
+  background-color: white;
+  color: #424242;
+  padding: 0;
+  margin: 0;
+}
+.aw-block--news a, .aw-block--news a:hover, .aw-block--news a:visited {
+  font-weight: bold;
+  color: #424242;
+  text-decoration: none;
+}
+.aw-block--news .btn {
+  background-color: #424242;
+  border: 2px solid #424242;
+  color: white;
+  border-radius: 2px;
+  padding: 1em;
+  margin: auto;
+  display: block;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.aw-block--news .btn a {
+  color: white;
+}
+.aw-block--news .btn-inverse {
+  background-color: #424242;
+  border: 2px solid #424242;
+  border-radius: 4px;
+  color: white !important;
+  padding: 1em;
+  margin: auto;
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+  cursor: pointer;
+  width: 230px;
+  text-align: center;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+.aw-block--news .btn-inverse:hover {
+  background-color: #585858;
+  border: 2px solid #424242;
+  color: white !important;
+  padding: 1em;
+  padding: 0;
+}
+
+.btn-group {
+  display: flex;
+  text-align: center;
+}
+
+.btn-group--element {
+  margin: auto;
+  display: flex;
+}
+
+.aw--picture--center {
+  width: 50%;
+  margin: auto;
+}
+@media (max-width: 700px) {
+  .aw--picture--center {
+    width: 95%;
+  }
+}
+
+.aw--picture--inverse {
+  margin: auto;
+}
+@media (max-width: 700px) {
+  .aw--picture--inverse {
+    width: 50% !important;
+  }
+}
+
+.aw-formation--detail {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+.aw-formation--detail li {
+  display: block;
+  padding: 0;
+}
+
+.aw-formation--step {
+  margin-bottom: 1em;
+}
+.aw-formation--step span {
+  font-size: 30px;
+  font-weight: bolder;
+  border-radius: 30%;
+  background-color: #424242;
+  padding: 0.5em 0.8em;
+  color: white;
+}
