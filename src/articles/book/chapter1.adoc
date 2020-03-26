@@ -10,7 +10,6 @@
 :imgteaser: test_00.jpg
 :pdf-width: 4in
 :pdf-height: 7in
-:prism-languages: ruby
 
 image::../img/chapter1.jpeg[]
 

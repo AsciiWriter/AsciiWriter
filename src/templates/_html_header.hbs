@@ -8,7 +8,12 @@
     <link rel="canonical" href="https://asciiwriter.github.io/{{canonicalUrl}}">
     <link rel="stylesheet" href="../../css/main.css"> 
     <link rel="preload" href="../../css/prism.css">
-
+<style>
+/* Override Asciidoctor CSS to get the correct background */
+.listingblock pre[class^="highlight "] {
+    background: #272822;
+}
+</style>
     <title>{{ title }}</title>
 
     <meta property="og:title" content="{{ title }}">
@@ -66,9 +71,7 @@
     header hr {
         width:100%;
         background-color: #424242;
-        border-color: #424242;
-        display: block;
-        border: 0;
+        border-color: #424242;book/chapter2.html
         height: 0.5em;
         margin: 0;
     }
