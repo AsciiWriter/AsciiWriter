@@ -13,7 +13,6 @@ module.exports = function ({ selector }) {
       const language = elem.prop('data-lang');
       const fileContents = elem.html();
       elem.parent().replaceWith( `<code class="language-${language}">${fileContents}</code>`);
-      elem.addClass('highlight.js');
     });
 
     file.contents = Buffer.from($.html());
