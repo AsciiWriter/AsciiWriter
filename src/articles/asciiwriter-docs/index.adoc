@@ -1,0 +1,135 @@
+= AsciiWriter static site generator
+:doctitle: apply template
+:language: en
+:description: Test
+:keywords: web, test
+:author: ojn
+:revdate: 2019-04-26
+:category: Test
+:teaser: Test
+:imgteaser: test_00.jpg
+:pdf-width: 4in
+:pdf-height: 7in
+:prism-languages: ruby
+:code: src/code/
+:sass: src/sass/
+
+You can write pages with plain text using Asciidoc markup language, specifically https://www.asciidoctor.org[Asciidoctor] implementation. 
+It is very similar to Markdown in spirit although it is not written in the same manner, the difference is that you don't  have to implement special helping functions to get important features. That makes Asciidoc text much more usable.
+
+Main pages are generated with ```Articles``` slug and with minimal editing you should be able to adapt it to for your own purpose. 
+To get familiar with Asciidoc, check out https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[Asciidoc syntax]
+
+== Target audience
+
+AsciiWriter is for everyone who likes to write in plain text. 
+If you appreciate Asciidoc markup, but feel that https://antora.org/[Antora] is too overwhelming to use or too overkill for your project. 
+Another goal is to be accessible even to novice Node.js users and keep the possibilities for easy modifications. 
+Because of this AsciiWriter tries  to minimize the amount of dependencies and self documenting source files.
+Currently the is no incremental build or preview process in AsciiWriter static site generator.
+
+Clone using git:
+
+```
+git clone https://github.com/asciiwriter/asciiwriter
+```
+
+To create HTML files, simply run npm scripts:
+
+```
+npm install && npm run build
+```
+
+```
+npm run default:sass
+```
+
+Once your pages are generated navigate to the ```build/docs``` directory and initialize git:
+
+```
+git init 
+```
+
+Add and commit your changes 
+```
+git add .
+git commit -m  "Some changes description" 
+```
+
+and set your upstream branch
+
+```
+git push --set-upstream https://github.com/<your-usename>/<your-repository> master
+```
+
+The aim is to use https://github.com/wycats/handlebars.js[Handlebars] templates and https://asciidoctor.org/articles/asciidoctor.js/[Asciidoctor.js] to write dynamic pages such as articles. Several others extensions help to generate a rss file and a sitemap file.
+
+
+== Settings
+
+Most of the settings are stored within link:./gulpfile.js[gulpfile.js]. If you expand the site beyond simple article writing, then you might need to change some other files as well.
+
+== Keeping the documentation up to date
+
+To keep the documentation current AsciiWriter mirrors the source files into ```src/articles/code```.
+In the root of the file system there are 2 scripts awailable to keep it synchronized, on Windows ```code.bat``` uses Robocopy to mirror files. On Linux and Unix-like systems you need install ```rsync``` to keep the files mirrored. 
+
+`apply-template` ext specified in link:./index.js[index.js] (extApplyTemplate) sets the handlebar templates on a file stream. Templates are applied after `read-html` and `read-asciidoctor` exts create the `templateModel` which is then sent to Handlebars where the template is used.
+
+*Gulpfile require*
+[source,javascript]
+----
+include::{code}gulpfile.js[tags=require]
+----
+
+*Example of usage*
+[source,javascript]
+----
+include::{code}gulpfile.js[tags=hbs-partials]
+----
+
+The templateModel has several attributes. For more details read the section about `read-html` or `read-asciidoctor` extension.
+
+Articles indexing task reads Asciidoc files converts those to html format and changes file extension to html. 
+Convert to JSON saves the data in a temporary json listing.
+
+*Articles indexing*
+[source,javascript]
+----
+include::{code}gulpfile.js[tags=articles-indexing]
+----
+
+The list of 
+
+*Articles list*
+[source,javascript]
+----
+include::{code}gulpfile.js[tags=articles-list]
+----
+
+*Create sitemap*
+[source,javascript]
+----
+include::{code}gulpfile.js[tags=sitemap]
+----
+
+*Check that important files are present*
+[source,javascript]
+----
+include::{code}gulpfile.js[tags=check]
+----
+
+=== convert-to-html
+Used to change Asciidoc file extension to html
+
+*Example of no metadata*
+[source,javascript]
+----
+include::{code}/ext/read-html.js[tags=no-metadata]
+----
+
+*Example of off sass include*
+[source,sass]
+----
+include::{sass}/extra.scss[tags=section]
+----
