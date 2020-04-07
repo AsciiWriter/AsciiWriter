@@ -5,7 +5,11 @@
     <meta name="keywords" content="{{#keywords}}{{keywords}}{{/keywords}}">
     <meta name="description" content="{{ description }}">
 
+<!--  tag::hbs-url[] -->
     <link rel="canonical" href="https://asciiwriter.github.io/{{canonicalUrl}}">
+    <link rel="alternate" type="application/rss+xml" title="{{ title }}" href="https://asciiwriter.github.io/rss/articles.xml">
+<!-- end::hbs-url[] -->
+
     <link rel="stylesheet" href="../../css/main.css"> 
     <link rel="preload" href="../../css/prism.css">
 <style>
@@ -18,11 +22,7 @@
 
     <meta property="og:title" content="{{ title }}">
     <meta property="og:type" content="website">
-    {{#filename}}
-    <meta property="og:url" content="https://asciiwriter.github.io/articles/{{dir}}/{{filename}}.html">
-    {{/filename}}
     <meta property="og:description" content="{{ description }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ title }}" href="https://asciiwriter.github.io/rss/articles.xml">
     
     <link rel="icon" href="{{ baseuri }}favicon.ico" type="image/x-icon">
     <link rel="preload" href="../../js/prism.js" as="script">
@@ -54,10 +54,8 @@
     }
 
     header {
-        height: 90px;
         max-height: 90px;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-        background-color: white;
+        padding: 10px;
         display: -webkit-flex;
         display: flex;
         flex-direction: column;
@@ -71,7 +69,7 @@
     header hr {
         width:100%;
         background-color: #424242;
-        border-color: #424242;book/chapter2.html
+        border-color: #424242;
         height: 0.5em;
         margin: 0;
     }

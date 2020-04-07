@@ -13,6 +13,8 @@
 :prism-languages: ruby
 :code: src/code/
 :sass: src/sass/
+:src: src/
+
 
 You can write pages with plain text using Asciidoc markup language, specifically https://www.asciidoctor.org[Asciidoctor] implementation. 
 It is very similar to Markdown in spirit although it is not written in the same manner, the difference is that you don't  have to implement special helping functions to get important features. That makes Asciidoc text much more usable.
@@ -68,6 +70,30 @@ The aim is to use https://github.com/wycats/handlebars.js[Handlebars] templates 
 == Settings
 
 Most of the settings are stored within link:./gulpfile.js[gulpfile.js]. If you expand the site beyond simple article writing, then you might need to change some other files as well.
+
+== Site URL
+
+To customize the URL for your website you simply change the header _html_header.hbs in the templates directory
+
+*To change the URL for RSS feed and canonical link in HTML*
+[source,html]
+----
+include::{src}templates/_html_header.hbs[tags=hbs-url]
+----
+
+Change the URLs in rss.json
+
+[source,json]
+----
+include::{src}metadata/rss.json[]
+----
+
+and sitemap.json as well
+
+[source,json]
+----
+include::{src}metadata/sitemap.json[]
+----
 
 == Keeping the documentation up to date
 
