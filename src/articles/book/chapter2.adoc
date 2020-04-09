@@ -2,7 +2,7 @@
 :doctitle: The Pool of Tears
 :language: en
 :description: Test
-:keywords: web, test
+:keywords: web, test, chapter2
 :author: Lewis Caroll
 :revdate: 2019-04-26
 :category: Test

@@ -1,0 +1,20 @@
+= Contributing to AsciiWriter
+
+You don't have to be a developer to contribute to this project. 
+There are plenty of other ways you can help: 
+
+* File bug reports
+* Create graphics
+* Improve the design
+* Write documentation
+
+== Writing new code and documentation
+
+AsciiWriter is written in Javasript using Node.js. 
+You can contribute code written by you or code that is adopted from somewhere else but released with a compatible license. 
+To document the changes, tag the parts with Asciidoctor style annotation and use includes in the final documentation file. 
+
+
+Divide your commits depending on a specific feature.
+Keep consistent commit messages with title in imperative style.
+
