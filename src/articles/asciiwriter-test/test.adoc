@@ -1,17 +1,17 @@
 = AsciiWriter static site generator
-:doctitle: apply template
+:doctitle: test template
 :language: en
-:description: Test
+:description: Testing
 :keywords: web, test
 :author: ojn
 :revdate: 2019-04-26
 :category: Test
 :teaser: Test
 :imgteaser: test_00.jpg
-:code: src/code
-:sass: src/sass
-:src: src
-:toc:
+:code: src/code/
+:sass: src/sass/
+:src: src/
+
 
 You can write pages with plain text using Asciidoc markup language, specifically https://www.asciidoctor.org[Asciidoctor] implementation. 
 It is very similar to Markdown in spirit although it is not written in the same manner, the difference is that you don't  have to implement special helping functions to get important features. That makes Asciidoc text much more usable.
@@ -75,21 +75,21 @@ To customize the URL for your website you simply change the header _html_header.
 *To change the URL for RSS feed and canonical link in HTML*
 [source,html]
 ----
-include::{src}/templates/_html_header_url.hbs[tags=hbs-url]
+include::{src}templates/_html_header_url.hbs[tags=hbs-url]
 ----
 
 Change the URLs in rss.json
 
 [source,json]
 ----
-include::{src}/metadata/rss.json[]
+include::{src}metadata/rss.json[]
 ----
 
 and sitemap.json as well
 
 [source,json]
 ----
-include::{src}/metadata/sitemap.json[]
+include::{src}metadata/sitemap.json[]
 ----
 
 == Keeping the documentation up to date
@@ -102,13 +102,13 @@ In the root of the file system there are 2 scripts awailable to keep it synchron
 *Gulpfile require*
 [source,javascript]
 ----
-include::{code}/gulpfile.js[tags=require]
+include::{code}gulpfile.js[tags=require]
 ----
 
 *Example of usage*
 [source,javascript]
 ----
-include::{code}/gulpfile.js[tags=hbs-partials]
+include::{code}gulpfile.js[tags=hbs-partials]
 ----
 
 The templateModel has several attributes. For more details read the section about `read-html` or `read-asciidoctor` extension.
@@ -119,7 +119,7 @@ Convert to JSON saves the data in a temporary json listing.
 *Articles indexing*
 [source,javascript]
 ----
-include::{code}/gulpfile.js[tags=articles-indexing]
+include::{code}gulpfile.js[tags=articles-indexing]
 ----
 
 The list of 
@@ -127,19 +127,19 @@ The list of
 *Articles list*
 [source,javascript]
 ----
-include::{code}/gulpfile.js[tags=articles-list]
+include::{code}gulpfile.js[tags=articles-list]
 ----
 
 *Create sitemap*
 [source,javascript]
 ----
-include::{code}/gulpfile.js[tags=sitemap]
+include::{code}gulpfile.js[tags=sitemap]
 ----
 
 *Check that important files are present*
 [source,javascript]
 ----
-include::{code}/gulpfile.js[tags=check]
+include::{code}gulpfile.js[tags=check]
 ----
 
 === convert-to-html

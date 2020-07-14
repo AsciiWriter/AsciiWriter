@@ -35,12 +35,12 @@
   "homepage": "https://github.com/AsciiWriter/AsciiWriter#readme",
   "devDependencies": {
     "@asciidoctor/core": "^2.1.1",
+    "@primer/css": "^14.4.0",
     "cheerio": "^0.22.0",
     "fs": "0.0.1-security",
     "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.0",
     "gulp-dart-sass": "^0.9.1",
-    "handlebars": "^4.7.3",
+    "handlebars": "^4.7.6",
     "map-stream": "0.0.7",
     "moment": "^2.24.0",
     "plugin-error": "^1.0.1"

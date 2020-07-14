@@ -1,5 +1,5 @@
 {
-  "site.html" : {
+  "articles.html" : {
     "keywords": "Asciidoctor.js, Asciidoc, Node.js, Gulp, Static Site Generator",
     "title": "AsciiWriter Articles",
     "description" : "AsciiWriter is a simple static site generator based on Asciidoctor.js, Gulp and Handlebars",

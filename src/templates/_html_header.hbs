@@ -5,10 +5,7 @@
     <meta name="keywords" content="{{#keywords}}{{keywords}}{{/keywords}}">
     <meta name="description" content="{{ description }}">
 
-<!--  tag::hbs-url[] -->
-    <link rel="canonical" href="https://asciiwriter.github.io/{{canonicalUrl}}">
-    <link rel="alternate" type="application/rss+xml" title="{{ title }}" href="https://asciiwriter.github.io/rss/articles.xml">
-<!-- end::hbs-url[] -->
+    {{> _html_header_url}}
 
     <link rel="stylesheet" href="../../css/main.css"> 
     <link rel="preload" href="../../css/prism.css">

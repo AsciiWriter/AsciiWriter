@@ -51,7 +51,7 @@ module.exports = (options, handlebarsTemplateFile, partials, filename, nbArticle
       metadata.firstArticle = () => articlesIndex[0];
       metadata.secondArticles = () => articlesIndex.filter((e, index) => index > 0 && index <= nbArticleMax);
       metadata.otherArticles = () => articlesIndex.filter((e, index) => index > nbArticleMax);
-      metadata.last15Articles = () => articlesIndex.filter((e, index) => index < 10);
+      metadata.latestArticles = () => articlesIndex.filter((e, index) => index < 10);
     }
     else {
       metadata.articleByYears = [];

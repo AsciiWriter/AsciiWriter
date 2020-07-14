@@ -12,6 +12,7 @@ const HANDLEBARS_PARTIALS = [
   {key: '_page_footer', path: 'src/templates/_page_footer.hbs'},
   {key: '_html_footer', path: 'src/templates/_html_footer.hbs'},
   {key: '_html_header', path: 'src/templates/_html_header.hbs'},
+  {key: '_html_header_url', path: 'src/templates/_html_header_url.hbs'},
 ];
 // end::hbs-partials[]
 
@@ -38,7 +39,7 @@ gulp.task('articles-rss', () =>
 gulp.task('articles-list', () =>
   gulp.src('build/.tmp/articlesindex.json')
       .pipe(website.readIndex())
-      .pipe(website.convertToArticlesList('src/templates/site.hbs', HANDLEBARS_PARTIALS, 'site.html', 1))
+      .pipe(website.convertToArticlesList('src/templates/articles.hbs', HANDLEBARS_PARTIALS, 'articles.html', 1))
       .pipe(gulp.dest('build/docs'))
 );
 // end::articles-list[]
@@ -50,7 +51,7 @@ gulp.task('articles-page', (cb) => {
       .pipe(website.convertToHtml())
       .pipe(website.highlightCode({selector: 'pre.highlight code'}))
       .pipe(
-        website.convertToArticlesPage('src/templates/site.hbs', HANDLEBARS_PARTIALS, 'build/.tmp/articlesindex.json'))
+        website.convertToArticlesPage('src/templates/articles.hbs', HANDLEBARS_PARTIALS, 'build/.tmp/articlesindex.json'))
       .pipe(gulp.dest('build/docs/articles'))
       .on('end', () => cb())
 });
@@ -70,7 +71,7 @@ gulp.task('html-indexing', () =>
 gulp.task('html-template', () =>
   gulp.src(`src/html/**/*.html`)
       .pipe(website.readHtml())
-      .pipe(website.applyTemplate(`src/templates/site.hbs`, HANDLEBARS_PARTIALS))
+      .pipe(website.applyTemplate(`src/templates/articles.hbs`, HANDLEBARS_PARTIALS))
       .pipe(gulp.dest('build/.tmp'))
       .pipe(gulp.dest('build/docs')));
 // end::html-template[]
@@ -84,7 +85,7 @@ gulp.task('404page', () =>
       .pipe(gulp.dest('build/docs')));
 // end::404page[]
 
-// tag::img[]      
+// tag::img[]
 gulp.task('img', () =>
   gulp.src(`src/img/**/*`)
       .pipe(gulp.dest('build/.tmp/img'))
@@ -137,7 +138,7 @@ gulp.task('check', () =>
              // We must have an 404 HTML page generated
              'build/docs/404.html',
              // We must have an pure teplate page generated
-             'build/docs/site.html'
+             'build/docs/articles.html'
            ])
       .pipe(website.extVerifyFiles())
       .pipe(gulp.dest('build/check'))

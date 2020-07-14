@@ -83,7 +83,7 @@ const HANDLEBARS_PARTIALS = [
 gulp.task('html-template', () =>
   gulp.src(`src/html/**/*.html`)
       .pipe(website.readHtml())
-      .pipe(website.applyTemplate(`src/templates/site.hbs`, HANDLEBARS_PARTIALS))
+      .pipe(website.applyTemplate(`src/templates/articles.hbs`, HANDLEBARS_PARTIALS))
       .pipe(gulp.dest('build/docs')));
 ----
 
@@ -266,7 +266,7 @@ gulp.task('adoc-template', () =>
   gulp.src(`src/html/**/*.html`)
       .pipe(website.readAsciidoc())
       .pipe(website.convertToHtml())
-      .pipe(website.applyTemplate(`src/templates/site.hbs`))
+      .pipe(website.applyTemplate(`src/templates/articles.hbs`))
       .pipe(gulp.dest('build/docs')));
 ----
 
@@ -328,7 +328,7 @@ In your handlebar template you can use the templateModel property values. For ex
 gulp.task('html-template', () =>
   gulp.src(`src/html/**/*.html`)
       .pipe(website.readHtml())
-      .pipe(website.applyTemplate(`src/templates/site.hbs`))
+      .pipe(website.applyTemplate(`src/templates/articles.hbs`))
       .pipe(gulp.dest('build/docs')));
 ----
 
