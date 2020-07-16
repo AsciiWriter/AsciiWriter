@@ -1,5 +1,6 @@
 'use strict';
 
+const Vinyl = require('vinyl');
 const PluginError = require('plugin-error');
 const handlebars = require('handlebars');
 const fs = require('fs');
@@ -48,7 +49,9 @@ module.exports = (options, handlebarsTemplateFile, partials, filename, nbArticle
 
     if (nbArticleMax) {
       metadata.firstArticle = () => articlesIndex[0];
-      metadata.latestArticles = function () { return blogIndex.filter(function (e, index) { return index < 15; }); };
+      metadata.secondArticles = () => articlesIndex.filter((e, index) => index > 0 && index <= nbArticleMax);
+      metadata.otherArticles = () => articlesIndex.filter((e, index) => index > nbArticleMax);
+      metadata.latestArticles = () => articlesIndex.filter((e, index) => index < 10);
     }
     else {
       metadata.articleByYears = [];
@@ -71,6 +74,11 @@ module.exports = (options, handlebarsTemplateFile, partials, filename, nbArticle
     }
   }
 
+  function endStream() {
+    let target = new Vinyl({ path: filename, contents: Buffer.from(handlebarsTemplate(metadata))});
+    this.emit('data', target);
+    this.emit('end');
+  }
 
   return through(iterateOnStream, endStream);
 

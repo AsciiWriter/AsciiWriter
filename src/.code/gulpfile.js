@@ -12,6 +12,7 @@ const HANDLEBARS_PARTIALS = [
   {key: '_page_footer', path: 'src/templates/_page_footer.hbs'},
   {key: '_html_footer', path: 'src/templates/_html_footer.hbs'},
   {key: '_html_header', path: 'src/templates/_html_header.hbs'},
+  {key: '_html_header_url', path: 'src/templates/_html_header_url.hbs'},
 ];
 // end::hbs-partials[]
 
@@ -84,7 +85,7 @@ gulp.task('404page', () =>
       .pipe(gulp.dest('build/docs')));
 // end::404page[]
 
-// tag::img[]      
+// tag::img[]
 gulp.task('img', () =>
   gulp.src(`src/img/**/*`)
       .pipe(gulp.dest('build/.tmp/img'))
