@@ -27,6 +27,8 @@ To create HTML files, simply run npm scripts:
 npm install && npm run build
 ```
 
+Sass styless can be generated with:
+
 ```
 npm run default:sass
 ```
