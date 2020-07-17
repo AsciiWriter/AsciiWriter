@@ -8,7 +8,7 @@
 :category: Test
 :teaser: Test
 :imgteaser: test_00.jpg
-:code: src/code/
+:code: src/.code/
 :sass: src/sass/
 :src: src/
 
