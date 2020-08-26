@@ -48,14 +48,18 @@
         </aw-section>
     </div>
      </div> 
-                <div class="aw-blog--previous">
+                <div class="paginate-container">
+                    <span class="paginate-container paginate">
                     {{#previous}}
                         Previous article : <a
                             href="../{{dir}}/{{filename}}.html">{{doctitle}}</a><br>
                     {{/previous}}
+                    </span>
+                    <span class="paginate-container paginate">
                     {{#next}}
                         Next article : <a href="../{{dir}}/{{filename}}.html">{{doctitle}}</a>
                     {{/next}}
+                    </span>
                 </div>
     {{> _page_footer}}
     {{> _html_footer}}
