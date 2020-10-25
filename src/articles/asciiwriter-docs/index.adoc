@@ -2,7 +2,7 @@
 :doctitle: apply template
 :language: en
 :description: Test
-:keywords: web, test
+:keywords: #web, #test
 :author: ojn
 :revdate: 2019-04-26
 :category: Test

@@ -43,7 +43,7 @@ If Asciidoc file format - *.adoc*  would be marketed as such, the public percept
 
 If you're writing text documents, the emphasis should be on text.
 Most people use Word because it's feature rich and allows fancy styling.
-But the format that it uses is binary, meaning it can not be opened and edited in plain text form.
+But the format that it uses is cumbersomem, it can not be opened and edited in plain text form.
 You need special software, this is not trivial, imagine that in a few years Word starts to interpet your files differently.
 The solution can be costly and time consuming.
 If you need to apply machine readable formatting you will have to reinvent the wheel.
