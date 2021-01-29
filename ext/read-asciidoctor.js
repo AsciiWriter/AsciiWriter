@@ -45,9 +45,6 @@ module.exports = function (options) {
     if (file.path.lastIndexOf("articles/") > 0) {
       dir = file.path.substring(file.path.lastIndexOf("articles/") + "articles/".length, file.path.lastIndexOf("/"));
     }
-    if (file.path.lastIndexOf("news/") > 0) {
-      dir = file.path.substring(file.path.lastIndexOf("news/") + "news/".length, file.path.lastIndexOf("/"));
-    }
 
     // make all model properties accessible through fat-arrow "getters"
     // this way, file.* values can be changed before templating
