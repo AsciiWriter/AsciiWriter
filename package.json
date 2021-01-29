@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/AsciiWriter/AsciiWriter#readme",
   "devDependencies": {
-    "@asciidoctor/core": "^2.2.0",
+    "@asciidoctor/core": "^2.2.1",
     "cheerio": "^0.22.0",
     "fs": "0.0.1-security",
     "gulp": "^4.0.2",
